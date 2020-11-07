@@ -32,23 +32,23 @@ for (let hourIndex = 9; hourIndex <= 24; hourIndex++) {
 
 // Military time
 for (let timeIndex = 9; timeIndex <= 24; timeIndex++) {
-    const currentTime = $(`#hour${timeIndex}`).data('time');
+    const timeCurrent = $(`#hour${timeIndex}`).data('time');
 
-    if (parseInt(currentDay.format('H')) > currentTime) {
+    if (parseInt(currentDay.format('H')) > timeCurrent) {
         $(`#hour${timeIndex}`).addClass('past')
     }
-    else if (parseInt(currentDay.format('H')) == currentTime) {
+    else if (parseInt(currentDay.format('H')) == timeCurrent) {
         $(`#hour${timeIndex}`).addClass('present')
     }
-    else if (parseInt(currentDay.format('H')) < currentTime) {
+    else if (parseInt(currentDay.format('H')) < timeCurrent) {
         $(`#hour${timeIndex}`).addClass('future')
     }
 }
 
 // Refreshing the planner!! WORK IN PROGRESS 
-$('clearBtn').on('click', (event) => {
-    event.preventDefault();
-        localStorage.empty();
-});
+//$('clearBtn').on('click', (event) => {
+//    event.preventDefault();
+//        localStorage.empty();
+//});
 
-console.log(clearBtn);
+//console.log(clearBtn);
