@@ -4,7 +4,7 @@ const currentDay = moment();
 //Shows current time in Header when page loads
 setInterval (function() {
     var date = moment();
-    $(".date").text(date.format("[Today is:] MMM DD, YYYY [at] h:mm a"));
+    $(".date").text(date.format("[Today is:] MMM DD, YYYY"));
     }, 1000);
 
 
